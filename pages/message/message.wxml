@@ -1,0 +1,13 @@
+<!--pages/message/message.wxml-->
+<view class="container">
+  <view class="record-item">
+    <view class="avatar">
+      <image src="../../static/images/user.png"/>
+    </view>
+    <view class="content">
+      <view class="name">水煮鱼煮水</view>
+      <view class="text">水煮鱼煮水怎么做？</view>
+    </view>
+    <view class="time">下午5：06</view>
+  </view>
+</view>

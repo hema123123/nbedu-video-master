@@ -1,0 +1,29 @@
+<!--pages/user/user.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+
+
+    <view class="weui-cells weui-cells_after-title infor-list" >
+      <navigator url="{{item.navigatorUrl}}" class="weui-cell weui-cell_access" wx:for="{{inforArr}}">
+        <view class="weui-cell__hd">
+          <view class="iconfont {{item.icon}}" style="background:{{item.bgColor}}"></view>
+        </view>
+        <view class="weui-cell__bd">{{item.title}}</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+
+    <view class="weui-cells weui-cells_after-title infor-list" >
+      <navigator url="{{item.navigatorUrl}}" class="weui-cell weui-cell_access" wx:for="{{activeArr}}">
+        <view class="weui-cell__hd">
+          <view class="iconfont {{item.icon}}" style="background:{{item.bgColor}}"></view>
+        </view>
+        <view class="weui-cell__bd">{{item.title}}</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+
+</view>

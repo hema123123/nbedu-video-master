@@ -1,0 +1,7 @@
+/**app.wxss**/
+@import "./static/wxss/weui.wxss";
+@import "./static/wxss/font.wxss";
+
+page{
+  background: #f9f9f9;
+}

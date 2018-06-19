@@ -1,0 +1,43 @@
+/* pages/message/message.wxss */
+.record-item{
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  position: relative;
+  font-size: 28rpx;
+  padding:10rpx 20rpx;
+}
+.record-item::after{
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom:1px solid #eee;
+}
+.record-item .avatar{
+  flex: 0 0 80rpx;
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+}
+.record-item .avatar image{
+  width: 100%;
+  height: 100%;
+}
+.record-item .content{
+  flex: 1;
+}
+.record-item .content .name{
+  font-size: 32rpx;
+}
+.record-item .content .text{
+  color:#888;
+}
+.record-item .time{
+  flex: 0 0 120rpx;
+  width: 120rpx;
+  font-size: 24rpx;
+  color:#888;
+}
