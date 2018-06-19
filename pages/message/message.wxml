@@ -1,13 +1,31 @@
 <!--pages/message/message.wxml-->
-<view class="container">
-  <view class="record-item">
-    <view class="avatar">
-      <image src="../../static/images/user.png"/>
+
+<view class="container chat">
+  <view class="chat-item flex-wrp">
+    <view class="avatar flex-item">
+      <image src="../../static/images/icon8.jpg"></image>
     </view>
-    <view class="content">
-      <view class="name">水煮鱼煮水</view>
-      <view class="text">水煮鱼煮水怎么做？</view>
+    <view class="chat-content flex-item">
+      <view class="chat-source">
+        <text class="chatmate">Alex</text>
+        <text class="lasttime">1 个月前</text>
+      </view>
+      <text class="chat-txt">你好~ 你好~ 你好~</text>
     </view>
-    <view class="time">下午5：06</view>
   </view>
+  <view class="chat-item flex-wrp">
+    <view class="avatar flex-item">
+      <image src="../../static/images/icon9.jpeg"></image>
+    </view>
+    <view class="chat-content flex-item">
+      <view class="chat-source">
+        <text class="chatmate">George</text>
+        <text class="lasttime">3 个月前</text>
+      </view>
+      <text class="chat-txt">你好~ 你好~ 你好~</text>
+    </view>
+  </view>
+
 </view>
+
+
