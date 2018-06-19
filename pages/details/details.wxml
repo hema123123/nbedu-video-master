@@ -38,6 +38,6 @@
 
 <view class="footer">
   <view class="iconfont icon-xiaoxi"></view>
-  <button type="primary">￥1 立即购买</button>
+  <button type="primary" bindtap="gotopay">￥1 立即购买</button>
   <view class="iconfont"></view>
 </view>

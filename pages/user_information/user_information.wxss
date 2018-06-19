@@ -1,0 +1,22 @@
+/* pages/user_information/user_information.wxss */
+.list-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+.list-item-label{
+  color:#888;
+  font-size: 28rpx;
+}
+.list-item-right{
+  color:#353535;
+  font-size: 32rpx;
+}
+
+.userInfo-avatar{
+  width: 80rpx;
+  height: 80rpx;
+}

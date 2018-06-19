@@ -1,5 +1,5 @@
-// pages/user/user.js
-const app=getApp();
+// pages/user_information/user_information.js
+const app = getApp();
 Page({
 
   /**
@@ -7,42 +7,12 @@ Page({
    */
   data: {
     userInfo: {},
-    inforArr: [{
-      "icon": "icon-mingpian",
-      "title": "个人信息",
-      "bgColor": "#4dd372",
-      "navigatorUrl": "#"
-    }
-    ],
-    activeArr: [{
-      "icon": "icon-lieb",
-      "title": "我的活动",
-      "bgColor": "#fdba38",
-      "navigatorUrl": "#"
-    }, {
-      "icon": "icon-gouwuchekong",
-      "title": "我的已购",
-      "bgColor": "#fbc65c",
-      "navigatorUrl": "#"
-    }, {
-      "icon": "icon-liwu",
-      "title": "赠送记录",
-      "bgColor": "#ff936c",
-      "navigatorUrl": "#"
-    }, {
-      "icon": "icon-youhuiquan",
-      "title": "优惠券",
-      "bgColor": "#ff7e66",
-      "navigatorUrl": "#"
-    }
-    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log("-----userPage onload");
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo
@@ -54,8 +24,6 @@ Page({
         })
       }
     }
-
-     
   },
 
   /**
@@ -105,10 +73,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  gotoinformation(){
-    wx.navigateTo({
-      url: "../user_information/user_information",
-    })
   }
 })

@@ -16,6 +16,8 @@
   background: #f9f9f9;
   border-radius: 50%;
   overflow: hidden;
+  border: 2px solid #fff;  
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);  
 }
 
 
