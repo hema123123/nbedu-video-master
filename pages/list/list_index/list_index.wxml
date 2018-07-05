@@ -1,0 +1,66 @@
+<!--pages/list/list_index/list_index.wxml-->
+
+<view class="container list_index theme">
+
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <navigator url="../list_infor/list_infor">
+          <image src="{{item}}" class="slide-image" />
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="shortcut flex-row align-items-center">
+    <view wx:for="{{quickEnter}}" class="shortcut-item">
+      <view class="iconfont {{item.icon}} theme-color"></view>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+
+  <view class="list-courses-wrapper">
+    <block wx:for="{{listCourses}}" wx:key="{{item.sortid}}">
+      <view class="list-courses flex-column">
+        <text class="list-courses-sort-title">{{item.sort}}</text>
+        <view class="list-courses-sort-courses">
+          <block wx:for="{{item.sortCourses}}" wx:key="{{item.courseId}}" wx:for-item="course">
+            <view class="sort-courses-item flex-row" data-course-id="{{course.courseId}}" data-course-name="{{course.name}}" bindtap="gotoList_infor">
+              <view class="course-img">
+                <image src="{{course.imgUrl}}" />
+              </view>
+              <view class="course-con flex-column">
+                <block wx:if="{{item.sortid<2}}">
+                  <view class="course-name tEllipsis">
+                    <text>【{{course.kind}}】{{course.name}}</text>
+                  </view>
+                  <view class="course-intro tEllipsis">
+                    <text>{{course.intro}}</text>
+                  </view>
+                  <view class="course-des">
+                    <text>已更新{{course.update}}期 | {{course.openSum}}人开通</text>
+                  </view>
+                </block>
+                <block wx:else>
+                  <view class="course-name tEllipsis">
+                    <text>{{course.kind}} | {{course.name}}</text>
+                  </view>
+                  <view class="course-intro tEllipsis">
+                    <text>{{course.date}} | {{course.time}}</text>
+                  </view>
+                  <view class="course-des">
+                    <text>已购买{{course.openSum}}人</text>
+                  </view>
+                </block>
+                <view class="course-price">￥<text class="course-price-strong">{{course.price}}</text>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+
+
+</view>

@@ -1,4 +1,4 @@
-/* pages/details/details.wxss */
+/* pages/list/list_infor/list_infor.wxss */
 .video-wrapper{
   background: #fff;
 }

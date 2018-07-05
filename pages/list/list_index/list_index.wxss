@@ -1,0 +1,101 @@
+/* pages/list/list_index/list_index.wxss */
+
+/* banner */
+
+.slide-image {
+  width: 100%;
+}
+
+/* 四个图标 */
+
+.shortcut {
+  height: 160rpx;
+  text-align: center;
+  font-size: 28rpx;
+  background: #fff;
+}
+
+.shortcut .shortcut-item {
+  color: #888;
+  width: 25%;
+}
+
+.shortcut .shortcut-item .iconfont {
+  font-size: 56rpx;
+}
+
+/* 列表 */
+
+.list-courses {
+  margin: 30rpx 0;
+}
+
+.list-courses .list-courses-sort-title {
+  text-align: center;
+  color: #00b800;
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+
+.sort-courses-item {
+  font-size: 26rpx;
+  background: #fff;
+  padding: 20rpx 40rpx;
+  position: relative;
+}
+
+.sort-courses-item::after {
+  content: "";
+  display: block;
+  border-bottom: 1rpx solid #eee;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.sort-courses-item:last-child::after {
+  display: none;
+}
+
+.sort-courses-item .course-img {
+  flex: 0 0 200rpx;
+  width: 200rpx;
+  height: 150rpx;
+  overflow: hidden;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+}
+
+.sort-courses-item .course-img image {
+  height: 100%;
+}
+
+/* 列表内容 */
+
+.sort-courses-item .course-con {
+  flex: 1;
+  width: 100rpx;
+  color: #888;
+  position: relative;
+}
+
+.sort-courses-item .course-con .course-name {
+  font-size: 30rpx;
+  color: #000;
+}
+
+.sort-courses-item .course-con .course-intro {
+  margin: 10rpx 0;
+}
+
+.sort-courses-item .course-con .course-price {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #ff415d;
+}
+
+.sort-courses-item .course-con .course-price .course-price-strong {
+  font-size: 32rpx;
+}

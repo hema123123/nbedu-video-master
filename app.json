@@ -1,12 +1,14 @@
 {
   "pages": [
-    "pages/message/message",
-    "pages/index/index",
-    "pages/user/user",
-    "pages/logs/logs",
-   
-    "pages/details/details",
-    "pages/user_information/user_information"
+    "pages/user/user_index/user_index",
+    "pages/user/user_infor/user_infor",
+
+    "pages/msg/msg_index/msg_index",
+
+    "pages/list/list_index/list_index",
+    "pages/list/list_infor/list_infor",
+    
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundColor": "#f9f9f9",
@@ -16,26 +18,26 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "#999",
+    "color": "#888",
     "selectedColor": "#19ad17",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/list/list_index/list_index",
         "text": "首页",
-        "iconPath": "static/images/home.png",
-        "selectedIconPath": "static/images/home_selected.png"
+        "iconPath": "static/images/tabs_img/home.png",
+        "selectedIconPath": "static/images/tabs_img/home_selected.png"
       },
       {
-        "pagePath": "pages/message/message",
+        "pagePath": "pages/msg/msg_index/msg_index",
         "text": "消息",
-        "iconPath": "static/images/msg.png",
-        "selectedIconPath": "static/images/msg_selected.png"
+        "iconPath": "static/images/tabs_img/msg.png",
+        "selectedIconPath": "static/images/tabs_img/msg_selected.png"
       },
       {
-        "pagePath": "pages/user/user",
+        "pagePath": "pages/user/user_index/user_index",
         "text": "我的",
-        "iconPath": "static/images/user.png",
-        "selectedIconPath": "static/images/user_selected.png"
+        "iconPath": "static/images/tabs_img/user.png",
+        "selectedIconPath": "static/images/tabs_img/user_selected.png"
       }
     ]
   }

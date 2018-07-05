@@ -1,4 +1,5 @@
-// pages/details/details.js
+// pages/list/list_infor/list_infor.js
+
 Page({
 
   /**

@@ -1,6 +1,7 @@
-//index.js
-import http from "../../utils/http.js"
-const util = require('../../utils/util.js')
+// pages/list/list_index/list_index.js
+
+import http from "../../../utils/http.js"
+const util = require('../../../utils/util.js')
 //获取应用实例
 const app = getApp()
 
@@ -42,11 +43,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log("-----indexPage onload");
+    console.log("-----list_index onload");
     this.getListCourse();
-
-
-
   },
 
   /**
@@ -103,17 +101,21 @@ Page({
   onShareAppMessage: function () {
 
   },
-  // upper(){
-  //   wx.startPullDownRefresh();
-  //   setTimeout(function(){
-  //     wx.stopPullDownRefresh()
-  //   },2000)
-  // }
+
   getListCourse() {
     //此处访问首页课程接口模拟本地数据
     var courses = util.get_index_courses().data;
     if (courses.code == "200") {
       this.setData({ listCourses: courses.data });
     }
+  },
+  gotoList_infor(e){
+    let obj={
+      courseId: e.currentTarget.dataset.courseId,
+      name: e.currentTarget.dataset.courseName
+    }
+    wx.navigateTo({
+      url: util.createURL("../list_infor/list_infor", obj)
+    });
   }
 })

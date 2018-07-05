@@ -2,6 +2,58 @@
 @import "./static/wxss/weui.wxss";
 @import "./static/wxss/font.wxss";
 
-page{
+page {
   background: #f9f9f9;
+}
+
+/* 主题色 */
+
+.theme .theme-color {
+  color: #00b800;
+}
+
+.theme .theme-bgColor {
+  background-color: #00b800;
+}
+
+/* flex */
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.flex-row-aicenter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-column-aicenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex-column-ajcenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 溢出隐藏 */
+
+.tEllipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

@@ -1,0 +1,19 @@
+<!--pages/user/user_index/user_index.wxml-->
+<view class="container user_index">
+  <view class="userInfo flex-column-ajcenter">
+    <avatar class="userInfo-avatar" url="{{userInfo.avatarUrl}}"></avatar>
+    <text class="userInfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+
+
+  <view class="term-wrapper">
+    <block wx:for="{{listItems}}">
+      <view class="term flex-row flex-row-aicenter">
+        <view class="term-icon iconfont {{item.icon}}"></view>
+        <text class="term-label">{{item.label}}</text>
+        <view class="term-more iconfont icon-youjiantou"></view>
+      </view>
+    </block>
+  </view>
+
+</view>

@@ -1,0 +1,15 @@
+<!--pages/msg/msg_index/msg_index.wxml-->
+<view class="container chat">
+  <block wx:for="{{msgs}}">
+    <view class="chat-item flex-row-aicenter">
+      <avatar class="avatar" url="{{item.s_avatar}}"></avatar>
+      <view class="chat-content">
+        <view class="chat-source">
+          <text class="chatmate">{{item.s_nickname}}</text>
+          <text class="lasttime">{{item.s_time}}</text>
+        </view>
+        <text class="chat-txt">{{item.s_con}}</text>
+      </view>
+    </view>
+  </block>
+</view>

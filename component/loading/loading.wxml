@@ -1,0 +1,5 @@
+<view class="spinner1 theme" hidden="{{ishidden}}">
+  <view class="bounce1 theme-bgColor"></view>
+  <view class="bounce2 theme-bgColor"></view>
+  <view class="bounce3 theme-bgColor"></view>
+</view>
