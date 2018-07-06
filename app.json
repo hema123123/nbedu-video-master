@@ -1,13 +1,15 @@
 {
   "pages": [
+    "pages/user/user_coupon/user_coupon",
     "pages/user/user_index/user_index",
     "pages/user/user_infor/user_infor",
 
+
+    "pages/list/list_infor/list_infor",
+    "pages/list/list_index/list_index",
+
     "pages/msg/msg_index/msg_index",
 
-    "pages/list/list_index/list_index",
-    "pages/list/list_infor/list_infor",
-    
     "pages/logs/logs"
   ],
   "window": {

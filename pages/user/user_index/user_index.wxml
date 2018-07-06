@@ -8,11 +8,11 @@
 
   <view class="term-wrapper">
     <block wx:for="{{listItems}}">
-      <view class="term flex-row flex-row-aicenter">
-        <view class="term-icon iconfont {{item.icon}}"></view>
+      <navigator url="{{item.toUrl}}" class="term flex-row flex-row-aicenter">
+        <view class="term-icon iconfont {{item.icon}}" style="background-color:{{item.bgColor}}"></view>
         <text class="term-label">{{item.label}}</text>
         <view class="term-more iconfont icon-youjiantou"></view>
-      </view>
+     </navigator>
     </block>
   </view>
 

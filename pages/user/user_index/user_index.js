@@ -11,27 +11,28 @@ Page({
       {
         icon:"icon-mingpian",
         label:"个人信息",
-        bgColor:"green"
+        bgColor:"#39d87b"
       },
       {
         icon: "icon-lieb",
         label: "我的活动",
-        bgColor: "green"
+        bgColor: "#fcb644"
       },
       {
         icon: "icon-gouwuchekong",
         label: "我的已购",
-        bgColor: "green"
+        bgColor: "#fbc660"
       },
       {
         icon: "icon-liwu",
         label: "赠送记录",
-        bgColor: "green"
+        bgColor: "#f4a56d"
       },
       {
         icon: "icon-youhuiquan",
         label: "优惠券",
-        bgColor: "green"
+        bgColor: "#f98264",
+        toUrl:"../user_coupon/user_coupon"
       }
     ]
   },

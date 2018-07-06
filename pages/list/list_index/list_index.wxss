@@ -1,7 +1,9 @@
 /* pages/list/list_index/list_index.wxss */
 
 /* banner */
-
+swiper{
+  height: 400rpx;
+}
 .slide-image {
   width: 100%;
 }

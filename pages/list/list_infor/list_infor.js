@@ -1,4 +1,5 @@
 // pages/list/list_infor/list_infor.js
+const app = getApp()
 
 Page({
 
@@ -6,17 +7,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isPlay: true
+    isPlay: true,
+    flag: false,
+    inputValue: ""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     console.log("-----detailsPage onload");
     console.log("options:", options);
     wx.setNavigationBarTitle({
-      title: options.name
+      title: options.name || "详情页"
     });
 
     // var that = this
@@ -129,49 +132,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
     this.videoContext = wx.createVideoContext('courseVideo')
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function (res) {
+  onShareAppMessage: function(res) {
     if (res.from === 'button') {
       // 来自页面内转发按钮
       console.log(res.target)
@@ -179,20 +182,22 @@ Page({
     return {
       title: '【视频课-彩铅】小森林彩铅疗愈课',
       path: '/page/detail/detail?id=123',
-      success: function (res) {
+      success: function(res) {
         console.log("转发成功", res);
       },
-      fail: function (res) {
+      fail: function(res) {
         console.log("转发失败", res);
       }
     }
   },
-  videoErrorCallback: function (e) {
+  videoErrorCallback: function(e) {
     console.log('视频错误信息:')
     console.log(e.detail.errMsg)
   },
   coursePlay() {
-    this.setData({ isPlay: !this.data.isPlay });
+    this.setData({
+      isPlay: !this.data.isPlay
+    });
     this.data.isPlay ? this.videoContext.play() : this.videoContext.pause();
   },
   gotopay() {
@@ -203,10 +208,23 @@ Page({
       'package': '',
       'signType': 'MD5',
       'paySign': '',
-      'success': function (res) {
-      },
-      'fail': function (res) {
-      }
+      'success': function(res) {},
+      'fail': function(res) {}
     })
+  },
+  switchModule() {
+    this.setData({
+      flag: !this.data.flag
+    })
+  },
+  bindKeyInput(e) {
+    this.setData({
+      inputValue: e.detail.value
+    })
+  },
+  clickSend(e) {
+    console.log("点击发送了,需要发送的内容是：", e.detail.value);
+    //这里需要调用接口上传发送的内容
+
   }
 })
