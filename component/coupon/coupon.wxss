@@ -1,0 +1,123 @@
+/* component/coupon/coupon.wxss */
+
+.coupon {
+  width: 94%;
+  margin: 10px auto;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  font-size: 24rpx;
+  position: relative;
+}
+
+.coupon.coupon-invalid {
+  position: relative;
+}
+
+.coupon.coupon-invalid::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.coupon.coupon-invalid .coupon-in {
+  color: #888 !important;
+}
+
+
+/* 无货状态 */
+.coupon-btn-invalid {
+  flex: 0 0 140rpx;
+  width: 140rpx;
+  background: greenyellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.coupon-btn-invalid-box {
+  position: absolute;
+  right: -60rpx;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #888;
+  overflow: hidden;
+  transform: rotateZ(-30deg);
+}
+
+.coupon-btn-invalid-box .coupon-btn-invalid-box-con {
+  width: 100%;
+  height: 40rpx;
+  display: block;
+  margin: 60rpx 0;
+  text-align: center;
+  line-height: 40rpx;
+  background-color: #888;
+  color: #fff;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
+
+
+
+
+
+
+.coupon-deno {
+  display: flex;
+  padding: 40rpx 40rpx;
+  color: #353535;
+  background: #fff;
+  align-items: center;
+}
+
+.coupon-in {
+  display: flex;
+  flex-direction: column;
+}
+
+.coupon-in:first-child {
+  flex: 0 0 100rpx;
+  width: 100rpx;
+  align-items: center;
+  color: red;
+}
+
+.coupon-deno .coupon-price text {
+  font-size: 56rpx;
+}
+
+.coupon-deno .coupon-bd {
+  flex: 1;
+  margin: 0 40rpx;
+}
+
+.coupon-deno .coupon-btn {
+  flex: 0 0 140rpx;
+  width: 140rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 24rpx;
+  box-sizing: border-box;
+  border-radius: 50rpx;
+  padding: 10rpx 20rpx;
+  background: red;
+  box-shadow: 0 1px 6px rgba(255, 0, 0, 0.5);
+}
+
+.coupon-infor {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20rpx;
+  color: #888;
+  padding: 16rpx 40rpx;
+  background: #fafafa;
+}
