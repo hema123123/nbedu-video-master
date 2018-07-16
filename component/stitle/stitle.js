@@ -1,10 +1,13 @@
-// component/coupon/coupon.js
+// component/stitle/stitle.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    invalid: Boolean
+    txt: {
+      type:String,
+      value:"一级标题"
+    }
   },
 
   /**

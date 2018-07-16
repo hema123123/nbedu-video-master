@@ -1,0 +1,26 @@
+<!--component/arealist/arealist.wxml-->
+<view class="arealist">
+  <block wx:for="{{data}}" wx:for-item="course" wx:for-key="{{course.id}}">
+
+    <view class="arealist-item {{tag?'flex-column':'flex-row'}}" bindtap="gotoList_infor">
+      <view class="pro-img"><image src="{{course.imgUrl}}" mode="aspectFit"></image></view>
+      <view class="pro-txt flex-row">
+        <view class="pro-des">
+          <text class="pro-name">{{course.name}}</text>
+          <view class="pro-tag">
+            <block wx:for="{{course.tag}}">
+            <text>{{item}}</text>
+            </block>
+          </view>
+          <view class="pro-con">
+            <text>导师：{{course.teacher}}</text>
+            <text class="separator">|</text>
+            <text>{{course.num}}人开通</text>
+          </view>
+        </view>
+        <view class="pro-price theme-color">￥{{course.price}}</view>
+      </view>
+    </view>
+
+  </block>
+</view>

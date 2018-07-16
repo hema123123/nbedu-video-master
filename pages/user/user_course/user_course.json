@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "已购买",
+  "usingComponents": {
+    "arealist": "../../../component/arealist/arealist",
+    "slidetab": "../../../component/slidetab/slidetab"
+  }
+}

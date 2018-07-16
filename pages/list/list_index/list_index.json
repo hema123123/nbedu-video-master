@@ -1,4 +1,8 @@
 {
   "enablePullDownRefresh": true,
-  "backgroundTextStyle": "dark"
+  "backgroundTextStyle": "dark",
+  "usingComponents":{
+    "arealist":"../../../component/arealist/arealist",
+    "stitle":"../../../component/stitle/stitle"
+  }
 }

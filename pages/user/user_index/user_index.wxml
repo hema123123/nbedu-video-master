@@ -7,12 +7,37 @@
 
 
   <view class="term-wrapper">
-    <block wx:for="{{listItems}}">
+    <block wx:for="{{firstItems}}">
       <navigator url="{{item.toUrl}}" class="term flex-row flex-row-aicenter">
         <view class="term-icon iconfont {{item.icon}}" style="background-color:{{item.bgColor}}"></view>
         <text class="term-label">{{item.label}}</text>
-        <view class="term-more iconfont icon-youjiantou"></view>
-     </navigator>
+        <view class="term-more">
+          <view class="iconfont icon-youjiantou"></view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+  <view class="term-wrapper">
+    <block wx:for="{{secondItems}}">
+      <navigator url="{{item.toUrl}}" class="term flex-row flex-row-aicenter">
+        <view class="term-icon iconfont {{item.icon}}" style="background-color:{{item.bgColor}}"></view>
+        <text class="term-label">{{item.label}}</text>
+        <view class="term-more">
+          <view class="iconfont icon-youjiantou"></view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+  <view class="term-wrapper">
+    <block wx:for="{{thirdItems}}">
+      <navigator url="{{item.toUrl}}" class="term flex-row flex-row-aicenter">
+        <view class="term-icon iconfont {{item.icon}}" style="background-color:{{item.bgColor}}"></view>
+        <text class="term-label">{{item.label}}</text>
+        <view class="term-more">
+          <text>{{item.info}}</text>
+          <view class="iconfont icon-youjiantou"></view>
+        </view>
+      </navigator>
     </block>
   </view>
 

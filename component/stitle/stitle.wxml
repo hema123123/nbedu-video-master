@@ -1,0 +1,8 @@
+<!--component/stitle/stitle.wxml-->
+<view class="title flex-row">
+  <view class="title-txt flex-row">
+    <view class="line theme-bgColor"></view>
+    <text>{{txt}}</text>
+  </view>
+  <navigator url="#" class="title-chk flex-row-aicenter">查看全部></navigator>
+</view>

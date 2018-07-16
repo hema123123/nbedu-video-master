@@ -16,7 +16,8 @@ const formatNumber = n => {
 
 module.exports = {
   formatTime: formatTime,
-  get_index_courses: get_index_courses,
+  get_index_ztcourses: get_index_ztcourses,
+  get_index_zxcourses: get_index_zxcourses,
   createURL: createURL
 }
 
@@ -35,7 +36,13 @@ function createURL(url, obj) {
 
 
 // 首页数据
-var index_courses = require("../data/data_index_courses.js");
-function get_index_courses() {
-  return index_courses;
+var index_ztcourses = require("../data/data_index_ztcourses.js");
+var index_zxcourses = require("../data/data_index_zxcourses.js");
+
+function get_index_ztcourses() {
+  return index_ztcourses;
+}
+
+function get_index_zxcourses() {
+  return index_zxcourses;
 }

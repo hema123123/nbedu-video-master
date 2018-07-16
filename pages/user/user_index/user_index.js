@@ -7,32 +7,41 @@ Page({
    */
   data: {
     userInfo: null,
-    listItems:[
+    firstItems:[
       {
-        icon:"icon-mingpian",
-        label:"个人信息",
-        bgColor:"#39d87b"
-      },
+        icon: "icon-mingpian",
+        label: "个人信息",
+        bgColor: "#39d87b",
+        toUrl: "#"
+      }
+    ],
+    secondItems:[
       {
         icon: "icon-lieb",
-        label: "我的活动",
-        bgColor: "#fcb644"
+        label: "已购买",
+        bgColor: "#fcb644",
+        toUrl: "../user_course/user_course"
       },
       {
         icon: "icon-gouwuchekong",
-        label: "我的已购",
-        bgColor: "#fbc660"
+        label: "已赠送",
+        bgColor: "#fbc660",
+        toUrl: "#"
       },
       {
         icon: "icon-liwu",
-        label: "赠送记录",
-        bgColor: "#f4a56d"
-      },
+        label: "优惠券",
+        bgColor: "#f4a56d",
+        toUrl: "../user_coupon/user_coupon"
+      }
+    ],
+    thirdItems:[
       {
         icon: "icon-youhuiquan",
-        label: "优惠券",
+        label: "联系客服",
+        info:"0571-12345678",
         bgColor: "#f98264",
-        toUrl:"../user_coupon/user_coupon"
+        toUrl: "#"
       }
     ]
   },

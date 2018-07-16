@@ -1,5 +1,4 @@
 /**app.wxss**/
-@import "./static/wxss/weui.wxss";
 @import "./static/wxss/font.wxss";
 
 page {
@@ -8,12 +7,12 @@ page {
 
 /* 主题色 */
 
-.theme .theme-color {
-  color: #00b800;
+.theme-color {
+  color: #ff366c;
 }
 
-.theme .theme-bgColor {
-  background-color: #00b800;
+.theme-bgColor {
+  background-color: #ff366c;
 }
 
 /* flex */
@@ -36,6 +35,12 @@ page {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.flex-row-ajcenter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .flex-column-aicenter {

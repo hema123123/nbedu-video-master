@@ -1,48 +1,12 @@
 <!--component/coupon/coupon.wxml-->
-<view class="coupon {{invalid? 'coupon-invalid':''}}">
-  <view class="coupon-deno">
-    <view class="coupon-in">
-      <view class="coupon-price">￥
-        <text>5</text>
-      </view>
-      <view>抵用券</view>
-    </view>
-    <view class="coupon-in coupon-bd">
-      <text>5元抵用券</text>
-      <text>有效期至：2018-10-31</text>
-    </view>
-    <block wx:if="{{!invalid}}">
-      <view class="coupon-in coupon-btn">立即使用</view>
-    </block>
-    <block wx:else>
-      <view class="coupon-in coupon-btn-invalid" wx:if="{{!product.count}}">
-        <view class="coupon-btn-invalid-box">
-          <text class="coupon-btn-invalid-box-con">已失效</text>
-        </view>
-      </view>
-    </block>
+<view class="coupon flex-row {{invalid? 'coupon-invalid':''}}">
+  <view class="coupon-con flex-column">
+    <text class="coupon-con-name">17画酷代金券</text>
+    <text class="coupon-con-sup">支持所有课程通用</text>
+    <text>有效期至：2018-06-27</text>
   </view>
-  <view class="coupon-infor">
-    <text>无门槛、先最新版客户端使用</text>
-    <view>使用规则</view>
+  <view class="coupon-sum flex-row-ajcenter">
+    <view style="display:flex;align-items:flex-end;">
+      <text>5</text>元</view>
   </view>
 </view>
-
-
-<!-- <view class="coupon coupon-invalid">
-  <view class="coupon-deno">
-    <view class="coupon-in">
-      <view class="coupon-price">￥<text>5</text></view>
-      <view>抵用券</view>
-    </view>
-    <view class="coupon-in coupon-bd">
-      <text>5元抵用券</text>
-      <text>有效期至：2018-10-31</text>
-    </view>
-    <view class="coupon-in coupon-btn">立即使用</view>
-  </view>
-  <view class="coupon-infor">
-    <text>无门槛、先最新版客户端使用</text>
-    <view>使用规则</view>
-  </view>
-</view> -->

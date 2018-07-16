@@ -1,0 +1,14 @@
+<!--pages/user/user_course/user_course.wxml-->
+<view class="container">
+  <slidetab navsort="{{navData}}">
+    <!-- <block wx:for="{{navData}}">
+      <view slot="{{item.text}}">{{item.text}}</view>
+    </block> -->
+    <view slot="专题课1" class="lists">
+       <arealist tag data="{{listZtCourses}}"></arealist>
+    </view>
+    <view slot="体验课" class="lists">
+      <arealist data="{{listZxCourses}}"></arealist>
+    </view>
+  </slidetab>
+</view>

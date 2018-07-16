@@ -36,7 +36,8 @@ Page({
         "icon": "icon-zixun",
         "name": "我要咨询"
       }],
-    listCourses: null
+    listZtCourses: [],
+    listZxCourses:[]
   },
 
   /**
@@ -44,7 +45,8 @@ Page({
    */
   onLoad: function (options) {
     console.log("-----list_index onload");
-    this.getListCourse();
+    this.getListZtCourse();
+    this.getListZxCourse();
   },
 
   /**
@@ -81,7 +83,8 @@ Page({
   onPullDownRefresh: function () {
     console.log("下拉刷新");
     wx.showNavigationBarLoading();
-    this.getListCourse();
+    this.getListZtCourse();
+    this.getListZxCourse();
     setTimeout(function () {
       wx.hideNavigationBarLoading();
       wx.stopPullDownRefresh();
@@ -102,20 +105,18 @@ Page({
 
   },
 
-  getListCourse() {
+  getListZtCourse() {
     //此处访问首页课程接口模拟本地数据
-    var courses = util.get_index_courses().data;
+    var courses = util.get_index_ztcourses().data;
     if (courses.code == "200") {
-      this.setData({ listCourses: courses.data });
+      this.setData({ listZtCourses: courses.data });
     }
   },
-  gotoList_infor(e){
-    let obj={
-      courseId: e.currentTarget.dataset.courseId,
-      name: e.currentTarget.dataset.courseName
+  getListZxCourse() {
+    //此处访问首页课程接口模拟本地数据
+    var courses = util.get_index_zxcourses().data;
+    if (courses.code == "200") {
+      this.setData({ listZxCourses: courses.data });
     }
-    wx.navigateTo({
-      url: util.createURL("../list_infor/list_infor", obj)
-    });
   }
 })

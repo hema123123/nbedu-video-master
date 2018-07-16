@@ -1,0 +1,17 @@
+<!--component/slidetab/slidetab.wxml-->
+<view class="slidetab-container">
+  <!-- tab导航栏 -->
+  <scroll-view class="nav">
+    <block wx:for="{{navsort}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+      <view class="nav-item {{currentTab == idx ?'active':''}}" data-current="{{idx}}" bindtap="switchNav">{{navItem.text}}</view>
+    </block>
+  </scroll-view>
+  <!-- 页面内容 -->
+  <swiper class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab">
+    <block wx:for="{{navsort}}">
+      <swiper-item>
+        <slot name="{{item.text}}"></slot>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
