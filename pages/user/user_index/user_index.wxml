@@ -5,40 +5,57 @@
     <text class="userInfo-nickname">{{userInfo.nickName}}</text>
   </view>
 
-
-  <view class="term-wrapper">
+  <view class="doc-lists">
     <block wx:for="{{firstItems}}">
-      <navigator url="{{item.toUrl}}" class="term flex-row flex-row-aicenter">
-        <view class="term-icon iconfont {{item.icon}}" style="background-color:{{item.bgColor}}"></view>
-        <text class="term-label">{{item.label}}</text>
-        <view class="term-more">
-          <view class="iconfont icon-youjiantou"></view>
-        </view>
-      </navigator>
-    </block>
-  </view>
-  <view class="term-wrapper">
-    <block wx:for="{{secondItems}}">
-      <navigator url="{{item.toUrl}}" class="term flex-row flex-row-aicenter">
-        <view class="term-icon iconfont {{item.icon}}" style="background-color:{{item.bgColor}}"></view>
-        <text class="term-label">{{item.label}}</text>
-        <view class="term-more">
-          <view class="iconfont icon-youjiantou"></view>
-        </view>
-      </navigator>
-    </block>
-  </view>
-  <view class="term-wrapper">
-    <block wx:for="{{thirdItems}}">
-      <navigator url="{{item.toUrl}}" class="term flex-row flex-row-aicenter">
-        <view class="term-icon iconfont {{item.icon}}" style="background-color:{{item.bgColor}}"></view>
-        <text class="term-label">{{item.label}}</text>
-        <view class="term-more">
-          <text>{{item.info}}</text>
-          <view class="iconfont icon-youjiantou"></view>
-        </view>
-      </navigator>
+      <view class="doc-listflex" hover-class="doc-listleft-active">
+        <navigator url="{{item.toUrl}}">
+          <view class="doc-view">
+            <view class="doc-listleft">
+              <view class="doc-icon iconfont {{item.icon}}" style="background:{{item.bgColor}}"></view>
+              <view style="display:inline-block;">{{item.label}}</view>
+            </view>
+            <view class="doc-listflex-wrap doc-icon ">
+              <text class="iconfont icon-youjiantou"></text>
+            </view>
+          </view>
+        </navigator>
+      </view>
     </block>
   </view>
 
+  <view class="doc-lists">
+    <block wx:for="{{secondItems}}">
+      <view class="doc-listflex" hover-class="doc-listleft-active">
+        <navigator url="{{item.toUrl}}">
+          <view class="doc-view" data-url="{{item.toUrl}}" bindtap="tapName">
+            <view class="doc-listleft">
+              <view class="doc-icon iconfont {{item.icon}}" style="background:{{item.bgColor}}"></view>
+              <view style="display:inline-block;">{{item.label}}</view>
+            </view>
+            <view class="doc-listflex-wrap doc-icon ">
+              <text class="iconfont icon-youjiantou"></text>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </block>
+  </view>
+
+
+  <view class="doc-lists">
+    <block wx:for="{{thirdItems}}">
+      <view class="doc-listflex" hover-class="doc-listleft-active" >
+        <view class="doc-view">
+          <view class="doc-listleft">
+            <view class="doc-icon iconfont {{item.icon}}" style="background:{{item.bgColor}}"></view>
+            <view style="display:inline-block;">{{item.label}}</view>
+          </view>
+          <view class="doc-listflex-wrap doc-icon">
+            <text data-num="{{item.info}}" bindtap="dial">{{item.info}}</text>
+            <text class="iconfont icon-youjiantou"></text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
 </view>

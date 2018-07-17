@@ -10,7 +10,9 @@
   <swiper class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab">
     <block wx:for="{{navsort}}">
       <swiper-item>
-        <slot name="{{item.text}}"></slot>
+        <scroll-view scroll-y>
+          <slot name="{{item.text}}"></slot>
+        </scroll-view>
       </swiper-item>
     </block>
   </swiper>

@@ -1,5 +1,5 @@
 /**app.wxss**/
-@import "./static/wxss/font.wxss";
+@import "./static/wxss/index.wxss";
 
 page {
   background: #f9f9f9;

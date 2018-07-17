@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "已赠送",
+  "usingComponents": {
+    "arealist": "../../../component/arealist/arealist"
+  }
+}

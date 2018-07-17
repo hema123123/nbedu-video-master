@@ -1,0 +1,5 @@
+/* pages/user/user_send/user_send.wxss */
+.container{
+  background: #fff;
+  padding: 0 20rpx;
+}

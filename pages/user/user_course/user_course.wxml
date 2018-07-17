@@ -5,7 +5,7 @@
       <view slot="{{item.text}}">{{item.text}}</view>
     </block> -->
     <view slot="专题课1" class="lists">
-       <arealist tag data="{{listZtCourses}}"></arealist>
+        <arealist tag data="{{listZtCourses}}"></arealist>
     </view>
     <view slot="体验课" class="lists">
       <arealist data="{{listZxCourses}}"></arealist>

@@ -1,0 +1,4 @@
+<!--pages/user/user_send/user_send.wxml-->
+<view class="container">
+  <arealist data="{{lists}}"></arealist>
+</view>

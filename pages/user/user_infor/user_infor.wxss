@@ -1,22 +1,29 @@
 /* pages/user_information/user_information.wxss */
-.list-item{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20rpx;
+
+page {
   background: #fff;
-  border-bottom: 1px solid #eee;
-}
-.list-item-label{
-  color:#888;
-  font-size: 28rpx;
-}
-.list-item-right{
-  color:#353535;
-  font-size: 32rpx;
 }
 
-.userInfo-avatar{
+.form {
+  padding-bottom: 80rpx;
+}
+
+.userInfo-avatar {
   width: 80rpx;
   height: 80rpx;
+}
+
+.fixBottom {
+  position: fixed;
+  bottom: 10rpx;
+  width: 100%;
+  background: #fff;
+}
+
+.fixBottom button {
+  width: 580rpx;
+  margin: 0 auto;
+  color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
 }

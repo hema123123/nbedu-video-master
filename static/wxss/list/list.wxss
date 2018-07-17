@@ -1,0 +1,79 @@
+.doc-lists {
+  width: 100%;
+  font-size: 28rpx;
+  /* border-top: 2rpx solid #eee;
+  border-bottom: 2rpx solid #eee; */
+  background: #fff;
+}
+
+.doc-listflex {
+  display: block;
+  /* height: 50px;
+  line-height: 50px; */
+  padding-left: 5%;
+}
+
+.doc-view {
+  display: -webkit-flex;
+  display: flex;
+  padding: 30rpx 0;
+  border-bottom: 2rpx solid #eee;
+}
+
+.doc-listflex:last-child .doc-view {
+  border: none;
+}
+
+.doc-lists .doc-icon .iconfont {
+  font-size: 24rpx;
+  margin-left: 10rpx;
+  color: #a4a4a4;
+}
+
+.doc-view view.doc-listflex-wrap {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.doc-view .doc-listleft {
+  display: flex;
+  align-items: center;
+}
+
+.doc-view>view:last-child {
+  text-align: right;
+  margin-right: 20rpx;
+}
+
+.doc-view view.icons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row;
+}
+
+.doc-view view.icons>view {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.doc-listleft view {
+  display: inline-block;
+}
+
+.doc-listleft view:nth-child(1) {
+  margin-right: 20rpx;
+}
+
+.doc-listleft-active, .navigator-hover {
+  background: #f2f3f5;
+}
+
+/* 带图标list的图标样式 */
+
+.doc-listleft .doc-icon {
+  display: inline-block;
+  margin-right: 20rpx;
+}

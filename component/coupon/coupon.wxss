@@ -2,7 +2,7 @@
 @import "../../app.wxss";
 
 .coupon {
-  font-size: 18rpx;
+  font-size: 22rpx;
   border-left: 10rpx solid #7ad262;
   border-radius: 10rpx;
   background: #fff;
@@ -26,12 +26,12 @@
 }
 
 .coupon-con .coupon-con-name {
-  font-size: 28rpx;
+  font-size: 32rpx;
   color: #333;
 }
 
 .coupon-con .coupon-con-sup {
-  margin: 30rpx 0 20rpx;
+  margin: 20rpx 0 10rpx;
 }
 
 .coupon-sum {
@@ -41,9 +41,9 @@
 }
 
 .coupon-sum text {
-  font-size: 32rpx;
+  font-size: 56rpx;
   position: relative;
-  top:6rpx;
+  top:14rpx;
   font-weight: 700;
 }
 

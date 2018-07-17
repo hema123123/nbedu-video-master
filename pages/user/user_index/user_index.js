@@ -7,16 +7,13 @@ Page({
    */
   data: {
     userInfo: null,
-    firstItems:[
-      {
-        icon: "icon-mingpian",
-        label: "个人信息",
-        bgColor: "#39d87b",
-        toUrl: "#"
-      }
-    ],
-    secondItems:[
-      {
+    firstItems: [{
+      icon: "icon-mingpian",
+      label: "个人信息",
+      bgColor: "#39d87b",
+      toUrl: "../user_infor/user_infor"
+    }],
+    secondItems: [{
         icon: "icon-lieb",
         label: "已购买",
         bgColor: "#fcb644",
@@ -26,7 +23,7 @@ Page({
         icon: "icon-gouwuchekong",
         label: "已赠送",
         bgColor: "#fbc660",
-        toUrl: "#"
+        toUrl: "../user_send/user_send"
       },
       {
         icon: "icon-liwu",
@@ -35,15 +32,13 @@ Page({
         toUrl: "../user_coupon/user_coupon"
       }
     ],
-    thirdItems:[
-      {
-        icon: "icon-youhuiquan",
-        label: "联系客服",
-        info:"0571-12345678",
-        bgColor: "#f98264",
-        toUrl: "#"
-      }
-    ]
+    thirdItems: [{
+      icon: "icon-youhuiquan",
+      label: "联系客服",
+      info: "0571-12345678",
+      bgColor: "#f98264",
+      toUrl: "#"
+    }]
   },
 
   /**
@@ -113,5 +108,12 @@ Page({
    */
   onShareAppMessage: function() {
 
+  },
+  dial(e) {
+    console.log(1111, e.target.dataset.num);
+    if (!e.target.dataset.num) return;
+    wx.makePhoneCall({
+      phoneNumber: e.target.dataset.num //仅为示例，并非真实的电话号码
+    })
   }
 })

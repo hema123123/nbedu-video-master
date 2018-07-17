@@ -18,7 +18,12 @@
             <text>{{course.num}}人开通</text>
           </view>
         </view>
-        <view class="pro-price theme-color">￥{{course.price}}</view>
+        <block wx:if="{{!course.buyed}}">
+          <view class="pro-price theme-color">￥{{course.price}}</view>
+        </block>
+        <block wx:else>
+          <view class="pro-price theme-color">已购买</view>
+        </block>
       </view>
     </view>
 

@@ -77,14 +77,14 @@ Page({
   },
   getListZtCourse() {
     //此处访问首页课程接口模拟本地数据
-    var courses = util.get_index_ztcourses().data;
+    var courses = util.get_user_ztcourses().data;
     if (courses.code == "200") {
       this.setData({ listZtCourses: courses.data });
     }
   },
   getListZxCourse() {
     //此处访问首页课程接口模拟本地数据
-    var courses = util.get_index_zxcourses().data;
+    var courses = util.get_user_zxcourses().data;
     if (courses.code == "200") {
       this.setData({ listZxCourses: courses.data });
     }

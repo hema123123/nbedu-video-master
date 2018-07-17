@@ -35,3 +35,7 @@
 .tab-content{
     overflow-y: scroll;
 }
+
+scroll-view{
+  height: 100%;
+}
