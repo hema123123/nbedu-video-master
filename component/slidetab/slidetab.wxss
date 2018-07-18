@@ -1,41 +1,45 @@
 /* component/slidetab/slidetab.wxss */
 
-.slidetab-container{
-    width: 100%;
-    height: 100%;
+.slidetab-container {
+  width: 100%;
+  height: 100%;
 }
+
 .nav {
-    height: 80rpx;
-    width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
-    line-height: 80rpx;
-    background: #fff;
-    font-size: 16px;
-    white-space: nowrap;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 99;
+  height: 80rpx;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 80rpx;
+  background: #fff;
+  font-size: 16px;
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
 }
+
 .nav-item {
-    width: 50%;
-    display: inline-block;
-    text-align: center;
-}
-.nav-item.active{
-    color: #ff366c;
+  width: 50%;
+  display: inline-block;
+  text-align: center;
 }
 
-.tab-box{
-    padding-top: 80rpx;
-    height: 100%;
-    box-sizing: border-box;
-}
-.tab-content{
-    overflow-y: scroll;
+.nav-item.active {
+  color: #ff366c;
 }
 
-scroll-view{
+.tab-box {
+  padding-top: 80rpx;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.tab-content {
+  overflow-y: scroll;
+}
+
+scroll-view {
   height: 100%;
 }

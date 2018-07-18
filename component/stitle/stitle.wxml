@@ -4,5 +4,5 @@
     <view class="line theme-bgColor"></view>
     <text>{{txt}}</text>
   </view>
-  <navigator url="#" class="title-chk flex-row-aicenter">查看全部></navigator>
+  <navigator url="../list_course/list_course?sort='{{sort}}'" class="title-chk flex-row-aicenter">查看全部></navigator>
 </view>

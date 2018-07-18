@@ -1,19 +1,31 @@
 /* pages/list/list_infor/list_infor.wxss */
-
+.tip{
+  width: 100%;
+  padding: 10rpx;
+  font-size:22rpx;
+  color:#dd5c01;
+  background: #ffd778;
+}
+.tip text{
+  padding-left: 20rpx;
+}
 /* 视频 */
 
 .video-wrapper {
   background: #fff;
 }
 
-.course-video {
+.course-video,.course-img {
   width: 100%;
+  background: #dedede;
 }
 
 /* 视频内容 */
 
 .course-warpper {
-  padding: 0 20rpx 20rpx;
+  padding: 20rpx 0;
+  margin: 0 20rpx;
+  border-bottom: 2rpx solid #eee;
   background: #fff;
 }
 
@@ -22,8 +34,8 @@
 }
 
 .course-warpper .course-share {
-  flex: 0 0 200rpx;
-  width: 200rpx;
+  flex: 0 0 240rpx;
+  width: 240rpx;
 }
 
 .course-content {
@@ -51,23 +63,45 @@
 }
 
 .course-warpper .course-share .course-share-item {
-  width: 50%;
   border: none;
-  padding: 0;
+  padding-right: 20rpx;
   font-size: 28rpx;
   color: #888;
+  border-right: 2rpx solid #eee;
+}
+
+.course-warpper .course-share .course-share-item:last-child {
+  border-right: 0;
 }
 
 .course-warpper .course-share .iconfont {
-  color: #00b800;
   font-size: 56rpx;
   height: 56rpx;
   line-height: 56rpx;
 }
 
+.tags {
+  font-size: 22rpx;
+  background: #fff;
+  padding: 20rpx;
+}
+
+.tags .iconfont {
+  font-size: 24rpx;
+  margin-right: 4rpx;
+}
+
+.tags .tags-item {
+  margin-right: 20rpx;
+}
+
+.tags .tags-item:last-child {
+  margin-right: 0;
+}
+
 /* 说明 */
 
-.instru {
+/* .instru {
   padding: 30rpx 20rpx 20rpx;
   flex-direction: column;
   background: #fff;
@@ -83,12 +117,49 @@
 
 .instru text {
   color: #353535;
-}
+} */
 
 /* 底部 */
 
-.area-con {
-  padding-bottom: 92rpx;
+.fix-ftab {
+  /* position: relative; */
+  background: #fff;
+}
+
+.fix-ftab .fix-tab-icon {
+  flex: 0 0 126rpx;
+  width: 126rpx;
+  font-size: 20rpx;
+}
+
+.fix-ftab .fix-tab-icon .iconfont {
+  font-size: 46rpx;
+}
+
+.fix-ftab button {
+  flex: 1;
+  color: #fff;
+  border-radius: 0;
+}
+
+.fix-tab-dd {
+  width: 100%;
+  height: 80rpx;
+  padding: 0 20rpx;
+  margin: 0 20rpx;
+  border-radius: 100rpx;
+  background: #eee;
+}
+.fix-tab-dd .iconfont{
+  flex:0 0 48rpx;
+  width:48rpx;
+  font-size:48rpx;
+  color:#a2a2a2;
+  margin-right: 10rpx;
+}
+.fix-ftab .fix-input {
+  flex:1;
+  font-size: 28rpx;
 }
 
 .footer {

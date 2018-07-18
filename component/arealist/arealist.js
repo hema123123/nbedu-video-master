@@ -26,11 +26,13 @@ Component({
     //页面跳转
     gotoList_infor(e) {
       let obj = {
-        courseId: e.currentTarget.dataset.courseId,
-        name: e.currentTarget.dataset.courseName
+        sort: e.currentTarget.dataset.sort,
+        id: e.currentTarget.dataset.id,
+        name: e.currentTarget.dataset.name
       }
+      console.log(obj);
       wx.navigateTo({
-        url: util.createURL("../list_infor/list_infor", obj)
+        url: util.createURL("../../detail/detail", obj)
       });
     }
   }

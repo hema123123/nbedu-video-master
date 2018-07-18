@@ -1,5 +1,5 @@
 <!--component/slidetab/slidetab.wxml-->
-<view class="slidetab-container">
+<view class="slidetab-container fix">
   <!-- tab导航栏 -->
   <scroll-view class="nav">
     <block wx:for="{{navsort}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">

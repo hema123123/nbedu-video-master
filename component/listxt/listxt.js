@@ -1,20 +1,21 @@
-// component/stitle/stitle.js
+// component/listxt/listxt.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    txt: {
-      type:String,
-      value:"一级标题"
-    }
+    tag: {
+      type: Boolean,
+      value: false
+    },
+    course:Object
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    sort:0
+
   },
 
   /**

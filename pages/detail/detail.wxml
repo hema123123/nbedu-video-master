@@ -1,0 +1,68 @@
+<!--pages/list/list_infor/list_infor.wxml-->
+<view class="container">
+  <view class="area-con fix-fcon">
+
+    <view class="video-wrapper">
+      <block wx:if="{{!course.buyed}}">
+        <view class="course-img flex-column-ajcenter">
+          <image src="{{course.imgUrl}}" mode="aspectFit"></image>
+          <view class="tip" wx:if="{{course.sort}}">
+            <text>购买专题课程后,请在第一时间添加微信（hua17002266）,预约课程时间。</text>
+          </view>
+        </view>
+      </block>
+      <block wx:else>
+        <video id="courseVideo" class="course-video" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+          binderror="videoErrorCallback" autoplay bindtap="coursePlay" objectFit="cover"></video>
+      </block>
+      <view class="course-warpper flex-row">
+        <listxt class="course-content" course="{{course}}" tag></listxt>
+        <view class="course-share">
+          <button open-type="share" class="course-share-item" plain>
+            <view class="theme-color iconfont icon-liwu"></view>
+            <text>送好友</text>
+          </button>
+          <button open-type="share" class="course-share-item" plain>
+            <view class="theme-color iconfont icon-zhuanfa"></view>
+            <text>转发</text>
+          </button>
+        </view>
+      </view>
+      <view class="tags flex-row">
+        <block wx:for="{{tags}}" wx:for-key="{{index}}">
+          <view class="tags-item">
+            <text class="iconfont icon-youjiantou"></text>
+            <text>{{item}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+
+  </view>
+
+  <!-- <view class="footer flex-row-aicenter">
+    <view class="theme-color iconfont {{flag?'icon-gouwuchekong':'icon-xiaoxi'}}" bindtap="switchModule"></view>
+    <button class="control" hidden="{{flag}}" type="primary" bindtap="gotopay">￥1 立即购买</button>
+    <input confirm-type="send" bindconfirm="clickSend"	 bindinput="bindKeyInput" class="control" hidden="{{!flag}}" placeholder="这里输入留言" />
+  </view> -->
+
+
+
+
+  <view class="fix-ftab flex-row-aicenter">
+    <block wx:if="{{!course.buyed}}">
+      <view class="fix-tab-icon flex-column-ajcenter theme-color">
+        <view class="iconfont icon-xiaoxi"></view>
+        <text>留言</text>
+      </view>
+      <button class="theme-bgColor">购买视频： ￥9.90</button>
+    </block>
+    <block wx:else>
+      <view class="fix-tab-dd flex-row-aicenter">
+        <view class="iconfont icon-xiaoxi"></view>
+        <input class="fix-input" placeholder="留言"></input>
+      </view>
+    </block>
+  </view>
+
+</view>

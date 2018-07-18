@@ -1,0 +1,21 @@
+<!--component/listxt/listxt.wxml-->
+<view class="pro-txt {{tag?'flex-column':'flex-row'}}">
+  <view class="pro-des">
+    <text class="pro-name">{{course.name}}</text>
+    <view class="pro-tag">
+      <block wx:for="{{course.tag}}">
+        <text>{{item}}</text>
+      </block>
+    </view>
+    <block wx:if="{{course.sended}}">
+      <text>赠送至：{{course.sended}}</text>
+    </block>
+    <block wx:else>
+      <view class="pro-con">
+        <text>导师：{{course.teacher}}</text>
+        <text class="separator">|</text>
+        <text>{{course.num}}人开通</text>
+      </view>
+    </block>
+  </view>
+</view>
